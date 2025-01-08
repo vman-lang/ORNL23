@@ -1,0 +1,11 @@
+{
+    "directory": "PhysicalTwin",
+    "execute_function": "python physical_twin.py",
+    "static_inputs": [
+        {"type": "", "port_id": "Config/physical_twin.csv"}
+    ],
+    "dynamic_inputs": [],
+    "dynamic_outputs": [
+        {"type": "", "port_id": "field_vals"}
+    ]
+}

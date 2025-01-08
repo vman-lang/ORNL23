@@ -1,0 +1,13 @@
+{
+    "directory": "DigitalTwin",
+    "execute_function": "python digital_twin.py",
+    "static_inputs": [
+        {"type": "", "port_id": "Config/digital_twin.csv"}
+    ],
+    "dynamic_inputs": [
+        {"type": "", "port_id": "field_vals"}
+    ],
+    "dynamic_outputs": [
+        {"type": "", "port_id": "pred_vals"}
+    ]
+}

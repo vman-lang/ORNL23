@@ -1,0 +1,47 @@
+{
+    "name": "digitalTbinMock",
+    "components": [
+        {
+            "name": "phyTwin",
+            "type": "PhysicalTwin",
+            "parameters": {
+                "in_file": "Config/physical_twin.csv",
+                "number_of_timesteps": 100
+            }
+        },
+        {
+            "name": "digTwin",
+            "type": "DigitalTwin",
+            "parameters": {
+                "in_file": "Config/digital_twin.csv"
+            }
+        },
+        {
+            "name": "dis",
+            "type": "Discriminator",
+            "parameters": {
+                "in_file": "Config/discriminator.csv"
+            }
+        }
+    ],
+    "links": [
+        {
+            "source": "phyTwin",
+            "source_port": "field_vals",
+            "target": "digTwin",
+            "target_port": "field_vals"
+        },
+        {
+            "source": "phyTwin",
+            "source_port": "field_vals",
+            "target": "dis",
+            "target_port": "field_vals"
+        },
+        {
+            "source": "digTwin",
+            "source_port": "pred_vals",
+            "target": "dis",
+            "target_port": "pred_vals"
+        }
+    ]
+}

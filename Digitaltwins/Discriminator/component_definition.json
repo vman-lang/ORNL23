@@ -1,0 +1,14 @@
+{
+    "directory": "Discriminator",
+    "execute_function": "python discriminator.py",
+    "static_inputs": [
+        {"type": "", "port_id": "in_file.csv"}
+    ],
+    "dynamic_inputs": [
+        {"type": "", "port_id": "field_vals"},
+        {"type": "", "port_id": "pred_vals"}
+    ],
+    "dynamic_outputs": [
+        {"type": "", "port_id": "diff_vals"}
+    ]
+}
