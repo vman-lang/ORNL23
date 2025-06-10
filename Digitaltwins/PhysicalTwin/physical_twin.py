@@ -46,6 +46,8 @@ class PhysicalTwin:
 
 
     def get_field_values (self, time, prev_field_list):
+        
+        #update this area to take in more complex/real data
 
         val = np.cos(time)
         field_val_list = prev_field_list
@@ -88,7 +90,7 @@ class PhysicalTwin:
                 print ("granted_time: ", granted_time)
                 
                 field_vals_list = self.get_field_values(request_time, field_vals_list)
-                print ("feild_vals_list: ", field_vals_list)
+                print ("field_vals_list: ", field_vals_list)
 
                 json_field_vals_list = ListF_to_send(field_vals_list)
 
